@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+  function del(){
+
+      alert("删除成功")
+      window.location.href="/message/delete/"+$("#name").val();
+
+  }
+
+</script>
+<form th:action="@{/message/update}" method="post">
+    <input type="hidden" name="id" th:value="${message.id}" id="name">
+    <p th:text="${#dates.format(message.createDate, 'yyyy-MM-dd')}"></p>
+
+    <input type="text" th:value="${message.title}" name="title">
+<br>
+
+<textarea th:text="${message.information}" name="information"></textarea>
+    <br>
+
+    <button id="buttonId" type="button" onclick="del()">删除</button>
+    <input type="submit" value="保存">
+
+    </form>
+</body>
+</html>

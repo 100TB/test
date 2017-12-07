@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>带全屏背景图片轮播切换的注册登录页面 - JS代码网</title>
+<meta name="keywords" content="jQuery背景全屏轮播,JS背景全屏轮播切换,注册登录页面,注册登录模板页面,注册登录HTML页面,注册登录HTML" />
+<meta name="description" content="JS代码网提供带全屏背景图片轮播切换的注册登录页面下载" />
+<meta charset="utf-8">
+<link href="css/home.css?v=2" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="banner-show" id="js_ban_content">
+    <div class="cell bns-01">
+      <div class="con"> </div>
+    </div>
+    <div class="cell bns-02" style="display:none;">
+      <div class="con"> <a href="http://www.js-css.cn" target="_blank" class="banner-link"> <i>圈子</i></a> </div>
+    </div>
+    <div class="cell bns-03" style="display:none;">
+      <div class="con"> <a href="http://www.js-css.cn" target="_blank" class="banner-link"> <i>企业云</i></a> </div>
+    </div>
+  </div>
+  <div class="banner-control" id="js_ban_button_box"> <a href="javascript:;" class="left">左</a> <a href="javascript:;" class="right">右</a> </div>
+  <script type="text/javascript">
+
+            </script>
+  <div class="container">
+    <div class="register-box">
+      <div class="reg-slogan"> 新用户登陆</div>
+      <div class="reg-form" id="js-form-mobile"> <br>
+        <br>
+        <form th:action="@{/login}" method="post">
+        <div class="cell">
+          <input type="text"  id="phone"  name="phone" placeholder="请输入手机号码" class="text"  maxlength="11" />
+
+        </div>
+          <div th:text="${msg}"></div>
+        <div class="cell" id="yanzhengma" >
+          <input type="password" name="password" id="password" placeholder="请输入密码" class="text" />
+        </div>
+          <div th:text="${msgp}"></div>
+        <div class="bottom"> <input type="submit" class="button btn-green" value="立即登陆"></div>
+          </form>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function  del() {
+        alert("删除成功")
+    }
+</script>
+<div align="center">
+<table>
+
+    <tr th:each="message:${message}">
+        <td th:text="${message.title}"><</td>
+        <td th:text="${#dates.format(message.createDate, 'yyyy-MM-dd')}">ffffff</td>
+        <td><a th:href="@{/message/edit/}+${message.id}"  />编辑</td>
+        <td><a onclick="del()" th:href="@{/message/delete/}+${message.id}" />删除</td>
+    </tr>
+</table>
+    </div>
+</body>
+</html>
